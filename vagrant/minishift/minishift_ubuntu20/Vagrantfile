@@ -29,8 +29,8 @@ Vagrant.configure("2") do |config|
     minishift.vm.hostname = "minishift"
     minishift.vm.provider "virtualbox" do |v|
         v.name = "minishift"
-        v.memory = 1024
-        v.cpus = 1
+        v.memory = 2048
+        v.cpus = 2
       end
       minishift.vm.provision "file", source: "minishift.key", destination: "/home/vagrant/.ssh/minishift.key"
     minishift.vm.provision :shell do |shell|
